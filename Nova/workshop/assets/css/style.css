@@ -1,0 +1,761 @@
+html{
+    font-size: 62.5%;
+    background-color: rgba(40, 36, 45, 1);
+}
+
+/* Style header + miniheader */
+
+
+header {
+    display: flex;
+    background: #F113BE;
+    background: radial-gradient(circle, rgba(241, 19, 190, 1) 0%, rgba(36, 0, 91, 1) 100%);
+    justify-content: space-between;
+    align-items: center;
+
+    img.svg {
+        margin-right: 3rem;
+    }
+
+    img.logo {
+        position: relative;
+        bottom: -4rem;
+        left: 4rem;
+        max-width: 30rem;
+        z-index: 100;
+    }
+    img.minilogo {
+        position: relative;
+        bottom: -4rem;
+        max-width: 30rem;
+    }
+
+    a.minilogo{
+        margin: 0 auto;
+    }
+
+    nav ul {
+        max-width: 85rem;
+        max-height: 20rem;
+
+        li {
+            display: inline-block;
+            margin-right: 3rem;
+
+            a {
+                font-family: "Gantari", sans-serif;
+                font-optical-sizing: auto;
+                font-size: 2rem;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                padding: 1rem;
+            }
+        }
+    }
+}
+
+h2, 
+h3, 
+a, 
+p{
+    color: white;
+}
+
+/* Gestion du carousel-slider */
+.dot{
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#f500d4;
+}
+
+.dot.active{
+    background:#F113BE;
+    box-shadow:0 0 10px #F113BE;
+}
+
+.carousel-container{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.carousel-track{
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 1s ease-in-out;
+}
+
+.slide{
+    min-width: 100%;
+}
+
+.slide img{
+    width: 100%;
+    display: block;
+    border-radius: 1rem;
+}
+
+/* Flèches */
+
+#precedent,
+#suivant{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 4rem;
+    height: 4rem;
+
+    border: none;
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    background: rgba(0,0,0,.4);
+    color: white;
+
+    font-size: 2rem;
+
+    transition: .3s;
+}
+
+#precedent:hover,
+#suivant:hover{
+    background: rgba(241,19,190,.8);
+}
+
+#precedent{
+    left: 2rem;
+}
+
+#suivant{
+    right: 2rem;
+}
+
+/* Style accueil: index.php + produit.php */
+
+body section div.bloc-produits article,
+body section div.bloc-catalogue article{
+    margin-bottom: 10rem;
+}
+
+body section div.bloc-produits h3,
+body section div.bloc-catalogue h3{
+    display: flex;
+    justify-content: center;
+    font-family: "Chango", sans-serif;
+    font-size: 3rem;
+    padding: 2rem;
+}
+
+body section div.presentation h3{
+    margin-top: 5rem;
+    font-family: "Chango", sans-serif;
+    font-size: 3rem;
+    padding: 2rem 0;
+}
+
+div.shaker-banner {
+    position: relative;
+}
+
+div.shaker-banner h2{
+    font-family: "Gantari", sans-serif;
+    font-size: 4rem;
+    position: absolute;
+    left: 4.8rem;
+    bottom: 4.8rem;
+    color: rgb(255, 236, 201);
+}
+
+div.wrapper img.produit-hero{
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+body section div.bloc-produits p,
+body section div.bloc-catalogue p{
+    display: flex;
+    justify-content: center;
+    font-family: "Gantari", sans-serif;
+    font-size: 2rem;
+    padding: 1rem;
+}
+body section div.bloc-produits p.prix,
+body section div.bloc-catalogue p.prix{
+    padding-bottom: 2rem;
+}
+
+/* Possible utilisation de !important (remplace ci-dessus)
+
+p.prix{
+    padding-bottom: 2rem !important;
+} */
+
+body section div.presentation p{
+    font-family: "Gantari", sans-serif;
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+body section div.presentation p.grand{
+    margin: 5rem 0;
+    font-family: "Gantari", sans-serif;
+    font-size: 4rem;
+}
+form.log p.grand{
+    margin-top: 5rem 0;
+    font-family: "Gantari", sans-serif;
+    font-size: 3rem;
+}
+
+body section div.bloc-produits p.petit,
+body section div.bloc-catalogue p.petit{
+    font-size: 1.2rem;
+}
+
+body section div.presentation p.petit{
+    font-size: 2rem;
+}
+
+/* body section div.wrapper{
+    border:1px solid red;
+} */
+
+body section div.wrapper h2{
+    margin-left: 10rem;
+    margin-top: 10rem;
+    margin-bottom: 5rem;
+    font-family: "Chango", sans-serif;
+    font-size: 5rem;
+    padding: 2rem;
+}
+
+body section div a.catalogue{
+    margin-top: 5rem;
+    margin-right: 15rem;
+    margin-bottom: 10rem;
+    display: flex;
+    justify-content: end;
+    font-family: "Chango", sans-serif;
+    font-size: 3rem;
+    text-decoration: underline; 
+}
+
+body section div.bloc-produits{
+    margin: 0 auto;
+    max-width: 120rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+body section div.bloc-catalogue{
+    margin: 0 auto;
+    max-width: 120rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+body section div.presentation{
+    margin-left: 15rem;
+    margin-right: 15rem;
+}
+
+article.presentation{
+    margin-left: 10rem;
+    margin-right: 10rem;
+    display: flex;
+    justify-content: center;
+}
+
+section.produit{
+    display: flex;
+    justify-self:flex-end;
+    justify-content: space-between;
+    min-width: 50%;
+}
+
+img.unique{
+    min-width: 50rem;
+    align-self: start;
+}
+
+img.shake{
+    min-width: 50rem;
+    align-self: center;
+}
+
+img.produit{
+    transition: transform 0.5s ease;
+}
+
+p.petit,
+p.moyen,
+p.prix,
+h3{
+    transition: color 0.5s ease;
+}
+
+a.ajout,
+a.panier, 
+button{
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: "Gantari", sans-serif;
+    font-size: 2.35rem;
+    padding: 2rem;
+    border: none;
+    background: rgba(241, 19, 190, 0.3);
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+img.svg-prod{
+    margin-right: 1.5rem;
+    height: 2.4rem;
+    width: auto;
+}
+
+img.svg-wish{
+    margin-right: 1rem;
+    height: 2.4rem;
+    width: auto;
+}
+
+a.wishlist{
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: "Gantari", sans-serif;
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    border: none;
+    background: rgba(241, 19, 190, 0.3);
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+li.quantite,
+label.panier{
+    margin: 1.5rem;
+    text-decoration: none;
+    font-family: "Gantari", sans-serif;
+    font-size: 2rem;
+    padding: 1rem;
+    color: white;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+ul.quantite,
+label.panier{
+    margin: 2rem 0;
+    border: 0.5rem solid rgba(241, 19, 190, 0.3);
+    border-radius: 1rem;
+}
+
+#medium, #large{
+    accent-color: #d100ff;
+}
+
+a.ajout,
+a.wishlist{
+    text-align: center;
+}
+label {
+  cursor: pointer;
+  padding: 1rem;
+}
+
+a.produit{
+    display: block;
+    text-decoration: none;
+    transition: background 0.5s ease;
+    border-radius: 5rem;
+
+
+    &:hover {
+        background: rgb(255, 230, 250);
+        border-radius: 5rem;
+
+        & > p.petit,
+        & > p.prix,
+        & > p.moyen,
+        & > h3{
+            color: black;
+        }
+
+        & > p.prix{
+            padding-bottom: 2rem;
+        }
+
+        & > img.produit{
+            transform: scale(1.1);
+        }
+    }
+}
+
+/* Style log et sign .php + achat.php */
+div.log {
+    padding: 5rem;
+}
+
+div.log,
+form.log {
+    margin: 0 auto;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: 2rem;
+    width: 30rem;
+    border-radius: 1rem;
+}
+
+h1.log {
+    font-family: "Gantari", sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    color: white;
+}
+
+h1.log2 {
+    font-family: "Gantari", sans-serif;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+}
+
+button.log {
+    font-family: "Gantari", sans-serif;
+    font-size: 2rem;
+    padding: 1rem;
+    border: none;
+    background: rgba(241, 19, 190, 0.3);
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+    width: 107.5%;
+}
+
+a.log {
+    font-family: "Gantari", sans-serif;
+    font-size: 1.5rem;
+    padding: 1rem;
+    border: none;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+input.log {
+    padding: 1rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+select.log {
+    padding: 1rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+    width: 107.5%;
+}
+textarea.log {
+    padding: 1rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+textarea.cup-text {
+    padding: 1rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+    width: 95%;
+    height: 10rem;
+}
+
+p.log{
+    font-family: "Gantari", sans-serif;
+    font-size: 1.5rem;
+    padding: 5rem;
+    border: none;
+    background: white;
+    color: black;
+    border-radius: 0.5rem;
+}
+
+/* Style catalogue + sidebar */
+
+div.sidebar{
+    display: flex;
+}
+
+.sidebar {
+    padding: 3rem;
+    color: #fff;
+    font-family: "Gantari", sans-serif;
+}
+
+.sidebar h2 {
+    font-size: 1.8rem;
+    margin: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: #ccc;
+}
+
+.filtre {
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+div.a
+.filtre label {
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+}
+
+.filtre input[type="checkbox"],
+.filtre input[type="radio"] {
+    accent-color: #d100ff;
+    cursor: pointer;
+}
+
+.main-content{
+    flex: 1;
+    border-left: 0.1rem solid white;
+}
+
+h1.catalogue{
+    font-size: 3rem;
+    margin: 4rem 3rem 3rem 3rem;
+}
+
+/* Style cup perso */
+
+h1.cup{
+    margin: 5rem;
+    font-family: "Gantari", sans-serif;
+    font-size: 5rem;
+    color: white;
+    padding: 2rem;
+}
+/* Style page about 1 et 2 */
+
+div.about{
+    display: flex;
+    align-items: self-start;
+}
+
+div.about h1{
+    margin: 10rem;
+    font-family: "Gantari", sans-serif;
+    font-size: 4rem;
+    color: white;
+}
+
+div.about p{
+    margin: 10rem;
+    font-family: "Gantari", sans-serif;
+    font-size: 2rem;
+    align-self: center;
+    line-height: 2.5rem;
+
+}
+
+div.about img{
+    width: 120%;
+    height: auto;
+    margin: 10rem;
+    border-radius: 20%;
+}
+
+/* Style contact form */
+
+form.contact-form{
+    margin: 5rem;
+    padding: 2rem;
+    gap: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Style panier */
+
+.checkout{
+    max-width: 100rem;
+    margin: 5rem auto;
+    padding: 0 2rem;
+}
+
+.cart-summary{
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 2rem;
+    margin-bottom: 6rem;
+}
+
+.cart-summary h2,
+.checkout-form h2{
+    font-family: "Gantari", sans-serif;
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.cart-item{
+    display:flex;
+    align-items:center;
+    gap:2rem;
+    margin-bottom:2rem;
+}
+
+.cart-item img{
+    width:70px;
+    height:auto;
+}
+
+.cart-info{
+    flex:1;
+}
+
+.cart-info h3{
+    font-family:"Gantari", sans-serif;
+    font-size:1.8rem;
+    color:white;
+}
+
+.cart-info p{
+    font-family:"Gantari", sans-serif;
+    font-size:1.4rem;
+    color:#d4d4d4;
+}
+
+.cart-quantity{
+    display:flex;
+    align-items:center;
+    gap:1rem;
+}
+
+.cart-quantity button{
+    width:3rem;
+    height:3rem;
+    border:none;
+    border-radius:.5rem;
+    cursor:pointer;
+}
+
+.cart-quantity span{
+    color:white;
+    font-size:1.6rem;
+}
+
+.price{
+    color:white;
+    font-size:1.8rem;
+    min-width:6rem;
+    text-align:right;
+}
+
+.cart-total{
+    margin-top:3rem;
+    display:flex;
+    justify-content:flex-end;
+}
+
+.cart-total p{
+    font-family:"Gantari", sans-serif;
+    font-size:2rem;
+    color:white;
+}
+
+.double-field{
+    display:flex;
+    gap:1rem;
+    width:107.5%;
+}
+
+.double-field input{
+    flex:1;
+}
+
+.checkout-btn{
+    margin-top:3rem;
+    width:107.5%;
+    padding:1.5rem;
+    border:none;
+    border-radius:.5rem;
+    background:rgba(241,19,190,.5);
+    color:white;
+    font-size:2rem;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.checkout-btn:hover{
+    background:#F113BE;
+    box-shadow:0 0 20px rgba(241,19,190,.5);
+}
+
+/* Style footer + minifooter */
+
+footer{
+    display: flex;
+    margin-top: 5rem;
+    background: #F113BE;
+    background: radial-gradient(circle, rgba(241, 19, 190, 1) 0%, rgba(36, 0, 91, 1) 100%);
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 2rem;
+
+
+    nav{
+        margin-right: 3rem; 
+        font-family: "Gantari", sans-serif;
+        font-optical-sizing: auto;
+        font-size: 3rem;
+        color:rgb(255, 255, 255);
+    }
+
+    img.logo{
+        max-width: 30rem;
+    }
+
+    h2{
+        padding: 2rem;
+    }
+
+    img.svg{
+        max-width: 3.1rem;
+        padding: 0.5rem;
+    }
+
+    nav ul li a{
+        font-family: "Gantari", sans-serif;
+        font-optical-sizing: auto;
+        font-size: 1.2rem;
+        color:rgb(255, 255, 255);
+        padding: 2rem;
+    }
+}

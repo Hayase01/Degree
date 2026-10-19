@@ -1,0 +1,155 @@
+:root{
+    --background: rgb(40,36,45);
+    --primary: #F113BE;
+    --secondary: #24005B;
+    --text: #ffffff;
+    --text-soft: #d4d4d4;
+    --cream: rgb(255,236,201);
+    --radius: 1rem;
+    --transition: .3s ease;
+}
+
+img,
+a,
+button,
+input,
+textarea{
+    transition:.3s ease;
+}
+img{
+    max-width: 100%;
+}
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:
+    radial-gradient(
+        circle,
+        var(--primary) 0%,
+        var(--secondary) 100%
+    );
+    padding:2rem 4rem;
+}
+
+header img.logo{
+    max-width:28rem;
+    z-index:100;
+}
+
+header nav ul{
+    display:flex;
+    gap:3rem;
+    list-style:none;
+}
+
+header nav a{
+    font-size:2rem;
+}
+
+header nav a:hover{
+    color:var(--cream);
+}
+
+.bloc-produits article{
+    display:flex;
+    justify-content:center;
+}
+
+a.produit{
+    width:100%;
+    max-width:32rem;
+    padding:2rem;
+    border-radius:2rem;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    transition:.35s;
+}
+
+a.produit:hover{
+    background:
+    rgba(255,255,255,.05);
+    box-shadow:
+    0 0 25px rgba(241,19,190,.15);
+}
+
+
+
+a.produit:hover img.produit{
+    transform:scale(1.06);
+}
+
+.bloc-produits h3{
+    margin-top:2rem;
+    font-size:2.6rem;
+    text-align:center;
+}
+
+.petit{
+    font-size:1.4rem;
+    color:#cccccc;
+    margin-top:1rem;
+}
+
+.moyen{
+    font-size:1.8rem;
+    margin-top:.8rem;
+}
+
+.prix{
+    margin-top:1.5rem;
+    color:var(--cream);
+    font-size:2.3rem;
+    font-weight:bold;
+}
+form{
+    display:flex;
+    flex-direction:column;
+    gap:2rem;
+}
+
+textarea,
+select{
+    width:100%;
+    padding:1.2rem;
+    border-radius:8px;
+    border:none;
+    outline:none;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+    box-shadow:
+    0 0 10px rgba(241,19,190,.5);
+}
+footer{
+    margin-top:8rem;
+    padding:3rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    background:
+    radial-gradient(
+        circle,
+        var(--primary) 0%,
+        var(--secondary) 100%
+    );
+}
+
+footer img.logo{
+    max-width:25rem;
+}
+
+footer nav ul{
+    list-style:none;
+}
+
+footer li{
+    margin:.8rem 0;
+}
+
+footer a:hover{
+    color:var(--cream);
+}

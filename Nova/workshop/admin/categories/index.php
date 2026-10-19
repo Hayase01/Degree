@@ -1,0 +1,68 @@
+<?php
+require_once '../../config/admin_init.php';
+requireLogin2();
+
+$stmt = $pdo->query("SELECT * FROM categories ORDER BY id_category ASC");
+$categories = $stmt->fetchAll();
+?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="../../assets/css/reset.css">
+    <link rel="stylesheet" href="../../assets/css/admin.css">
+</head>
+<body>
+    <section>
+        <div class="admin-wrapper">
+            <aside class="sidebar">
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="../dashboard.php">Tableau de bord</a></li>
+                    <li><a href="../produits/index.php">Produits</a></li>
+                    <li><a href="../categories/index.php">Catégories</a></li>
+                    <li><a href="../types/index.php">Types</a></li>
+                    <li><a href="../commandes.php">Commandes</a></li>
+                    <li><a href="../../index.php">NOVA</a></li>
+                    <li><a href="../logout.php">Déconnexion</a></li>
+                </ul>
+            </aside>
+            <main class="main-content">
+                <div class="admin-header">
+                    <h1>Gestion des catégories</h1>
+                    <a href="create.php" class="btn">+ Ajouter une catégorie</a>
+                </div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nom</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($categories as $cat): ?>
+                            <tr>
+                                <td><?= $cat['id_category'] ?></td>
+                                <td><?= htmlspecialchars($cat['nom']) ?></td>
+                                <td class="actions">
+                                    <a href="edit.php?id=<?= $cat['id_category'] ?>" class="edit">
+                                        <img src="../../assets/img/svg/edit.svg" alt="edit">
+                                    </a>
+                                    <a href="delete.php?id=<?= $cat['id_category'] ?>" 
+                                       onclick="return confirm('Supprimer cette catégorie ?')" 
+                                       class="delete">
+                                        <img src="../../assets/img/svg/delete.svg" alt="delete">
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </main>
+        </div>
+    </section>   
+</body>
+</html>
