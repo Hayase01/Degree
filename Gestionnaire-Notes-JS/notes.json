@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "nom": "Alice Martin",
+        "matiere": "PHP",
+        "note": 15
+    },
+    {
+        "id": 2,
+        "nom": "Bob Dupont",
+        "matiere": "JavaScript",
+        "note": 12
+    },
+    {
+        "id": 3,
+        "nom": "Manuel Hubert",
+        "matiere": "Social",
+        "note": 0
+    },
+    {
+        "id": 4,
+        "nom": "Roger Bernard",
+        "matiere": "Math",
+        "note": 14
+    },
+    {
+        "id": 5,
+        "nom": "Sir Oofie",
+        "matiere": "EPS",
+        "note": 18
+    },
+    {
+        "id": 6,
+        "nom": "Tony McFus\u00e9e",
+        "matiere": "Science",
+        "note": 20
+    },
+    {
+        "id": 7,
+        "nom": "Roberto Carlos",
+        "matiere": "Fran\u00e7ais",
+        "note": 9
+    },
+    {
+        "id": 8,
+        "nom": "Philippe Poutou",
+        "matiere": "Politique",
+        "note": 10
+    }
+]
