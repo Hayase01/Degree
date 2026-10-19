@@ -1,0 +1,16 @@
+
+# Fichiers de configuration contenant des identifiants
+/config/database.php
+
+# Fichiers d'environnement
+.env
+.env.*
+
+# Dépendances installées localement
+/vendor/
+/node_modules/
+
+# Fichiers temporaires et système
+.DS_Store
+Thumbs.db
+*.log
